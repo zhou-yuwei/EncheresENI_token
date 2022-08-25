@@ -82,14 +82,16 @@ public class Utilisateur {
 	 * ne doit pas être inclus dans le JSON complet de la relation (sinon boucle infinie)
 	 * 
 	 */
+	@JoinColumn(name = "utilisateur_id")
 	@JsonBackReference
 	//@JsonIgnore
 	private List<Enchere> encheres;
 	
-	public Utilisateur(String pseudo, String motDePasse) {
+	public Utilisateur(String pseudo, String motDePasse, boolean administrateur) {
 		super();
 		this.pseudo = pseudo;
 		this.motDePasse = motDePasse;
+		this.administrateur = administrateur;
 	}
 
 	public Utilisateur(long noUtilisateur, String pseudo, String nom, String prenom, String email, String telephone,

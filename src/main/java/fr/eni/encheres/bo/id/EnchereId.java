@@ -6,10 +6,10 @@ import java.io.Serializable;
 public class EnchereId implements Serializable{
 
 
-	private long encherisseur;
+	private long noEncherisseur;
 	
 
-	private long articleEnVente;
+	private long noArticle;
 	
 	
 }

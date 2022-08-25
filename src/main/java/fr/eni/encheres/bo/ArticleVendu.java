@@ -72,6 +72,7 @@ public class ArticleVendu {
     
     @OneToMany
 	@JsonIgnore
+	@JoinColumn(name = "article_id")
 	//@JsonBackReference
     private List<Enchere> encheres;
         

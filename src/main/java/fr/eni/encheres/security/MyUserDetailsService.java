@@ -15,13 +15,13 @@ import fr.eni.encheres.service.UtilisateurService;
 	@Autowired
 	private UtilisateurService utilisateurService;	
 	
-//	public MyUserDetailsService(UtilisateurService utilisateurService) throws Exception {
-//		try {
-//			utilisateurService.addUtilisateur(new Utilisateur("admin", "admin", true));
-//		} catch (Exception e) {
-//		new Exception("admin déjà existant");
-//		}
-//	}
+	public MyUserDetailsService(UtilisateurService utilisateurService) throws Exception {
+		try {
+			utilisateurService.addUtilisateur(new Utilisateur("admin", "admin", true));
+		} catch (Exception e) {
+		new Exception("admin déjà existant");//warning dans le console pas grave
+		}
+	}
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) {
