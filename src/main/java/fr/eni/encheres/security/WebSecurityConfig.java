@@ -19,10 +19,10 @@ private JwtFilter jwtFilter;
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeRequests() // ON AUTORISE
                 .antMatchers(HttpMethod.GET, "/**").permitAll() // les requêtes GET
-                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll() // les requêtes OPTIONS
-                .antMatchers("/login").permitAll() // les requêtes pour se loguer
+                .antMatchers(HttpMethod.OPTIONS, "/api/**").permitAll() // les requêtes OPTIONS
+                .antMatchers("/api/login").permitAll() // les requêtes pour se loguer
                 .anyRequest().authenticated() // sinon, besoin d'être authentifie
-                .and().csrf().ignoringAntMatchers("/**");
+                .and().csrf().ignoringAntMatchers("/api/**");
 //.formLogin(); commenté car on ne veut pas de redirection vers le formulaire de login
 /*****************************************************************
         * AVANT DE FAIRE LA VERIFICATION DE SECURITE, ON AJOUTE UN FILTRE

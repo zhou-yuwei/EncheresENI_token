@@ -16,7 +16,7 @@ import fr.eni.encheres.security.JwtUtils;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/login")
+@RequestMapping("/api/login")
 public class LoginRestController {
 	@Autowired
 	private JwtUtils jwtUtils;

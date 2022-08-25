@@ -18,7 +18,7 @@ import fr.eni.encheres.service.ArticleVenduService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/article")
+@RequestMapping("/api/article")
 public class ArticleVenduRestController {
 
 	@Autowired

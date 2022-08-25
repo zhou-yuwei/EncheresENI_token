@@ -18,7 +18,7 @@ import fr.eni.encheres.service.CategorieService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/categorie")
+@RequestMapping("/api/categorie")
 public class CategorieRestController {
 
 	@Autowired

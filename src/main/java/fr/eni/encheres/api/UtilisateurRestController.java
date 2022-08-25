@@ -18,7 +18,7 @@ import fr.eni.encheres.service.UtilisateurService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/utilisateur")
+@RequestMapping("/api/utilisateur")
 public class UtilisateurRestController {
 
     @Autowired

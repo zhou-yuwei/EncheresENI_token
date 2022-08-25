@@ -37,5 +37,15 @@ public class EnchereServiceJPAImpl implements EnchereService {
 		enchereRepository.delete(enchere);
 		
 	}
+	@Override
+	public List<Enchere> getEncheresParArticle(Long noArticle) {
+		
+		return enchereRepository.findByArticleEnVenteNoArticleOrderByMontantEnchereDesc(noArticle);
+	}
+	@Override
+	public Enchere getMeilleureEnchereParArticle(Long noArticle) {
+		
+		return enchereRepository.findTop1ByArticleEnVenteNoArticleOrderByMontantEnchereDesc(noArticle);
+	}
 
 }

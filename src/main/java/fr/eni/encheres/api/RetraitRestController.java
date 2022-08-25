@@ -18,7 +18,7 @@ import fr.eni.encheres.service.RetraitService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/retrait")
+@RequestMapping("/api/retrait")
 public class RetraitRestController {
 
 	@Autowired
