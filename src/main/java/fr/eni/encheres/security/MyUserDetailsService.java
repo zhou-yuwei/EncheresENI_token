@@ -19,7 +19,8 @@ import fr.eni.encheres.service.UtilisateurService;
 		try {
 			utilisateurService.addUtilisateur(new Utilisateur("admin", "admin", true));
 		} catch (Exception e) {
-		new Exception("admin déjà existant");//warning dans le console pas grave
+		//throw new Exception("admin déjà existant");//warning dans le console pas grave
+		System.err.println("admin déjà existant");
 		}
 	}
 	

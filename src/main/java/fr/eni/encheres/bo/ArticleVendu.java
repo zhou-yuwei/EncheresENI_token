@@ -55,6 +55,7 @@ public class ArticleVendu {
     private Retrait lieuRetrait;
     
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "categorie_id")
     private Categorie categorie;
    
